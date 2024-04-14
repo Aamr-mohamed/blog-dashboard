@@ -5,7 +5,6 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home({ blogs }) {
-  console.log(blogs);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   function formattedDate(date) {
@@ -72,7 +71,7 @@ export default function Home({ blogs }) {
                 filterBlogs(selectedCategory).map((blog, index) => (
                   <Card
                     key={index}
-                    href={`/blog/${blog.id}`}
+                    href={`/post/${blog.id}`}
                     imageSrc={blog.photo_url}
                     alt="Travel"
                     title={blog.title}
