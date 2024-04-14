@@ -48,10 +48,10 @@ function SinglePost({ params }) {
       <Header />
       <div className="mx-auto max-w-5xl">
         <header className="mb-14">
-          <h1 className="mb-3 mt-0 text-center text-3xl font-bold leading-normal text-slate-900 py-2">
+        <div className="text-center mt-4">Published: {post.created_at}</div>
+          <h1 className="mb-3 mt-0 text-center text-5xl font-bold leading-normal text-slate-900 py-2">
             {post.title}
           </h1>
-          <div className="text-center">Published: {post.created_at}</div>
           <div className="text-center">Last Updated: {post.updated_at}</div>
           <div className="-mx-7 mt-10 md:mx-0">
             <div class="my-3 text-center">
@@ -71,7 +71,7 @@ function SinglePost({ params }) {
             />
           </div>
         </header>
-        <div className=" max-w-none text-slate-800">
+        <div className=" max-w-none text-slate-800 pb-2">
           {parse(post.content_html)}
         </div>
       </div>
